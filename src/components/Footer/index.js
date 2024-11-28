@@ -84,6 +84,8 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
+const CurrentYear = new Date().getFullYear();
+
 function Footer() {
   return (
     <FooterContainer>
@@ -93,17 +95,15 @@ function Footer() {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
+          {/* <NavLink href="#projects">Projects</NavLink> */}
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 Vigneshwaran. All rights reserved.
+          &copy; {CurrentYear} Vigneshwaran. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

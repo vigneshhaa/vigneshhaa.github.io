@@ -142,17 +142,21 @@ const Contact = () => {
 
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
+          <Desc><b>Email :</b> vigneshhaa@gmail.com</Desc>
+          <Desc><b>Mobile Number :</b> 7397583382</Desc>
+          <Desc><b>Website :</b> vigneshhaa.github.io</Desc>
+          <Desc><b>Location :</b> Puducherry, India.</Desc>
+          
+          {/* <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactButton type="submit" value="Send" /> */}
         </ContactForm>
         <Snackbar
           open={open}
