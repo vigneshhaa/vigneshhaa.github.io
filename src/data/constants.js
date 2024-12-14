@@ -9,7 +9,7 @@ export const Bio = {
     "Programmer",
   ],
   description:
-    "Experienced Team Lead and Full Stack Developer with 5+ years of expertise in designing, developing, and managing complex web application. Proficient in leading cross-functional teams, driving Agile development, and delivering high-quality software solutions.",
+    "Experienced Team Lead and Full Stack Developer with 6 years of expertise in designing, developing, and managing complex web application. Proficient in leading cross-functional teams, driving Agile development, and delivering high-quality software solutions.",
   github: "https://github.com/vigneshhaa",
   resume:
     "https://drive.google.com/file/d/1JmECqrjNUREtv9yCmmtvET9WpVFXlI1i/view?usp=sharing",
