@@ -11,8 +11,8 @@ export const Bio = {
   description:
     "Experienced Full Stack Developer with 6 years of expertise in designing, developing, and managing complex web application. Proficient in leading cross-functional teams, driving Agile development, and delivering high-quality software solutions.",
   github: "https://github.com/vigneshhaa",
-  resume:
-    "https://drive.google.com/file/d/1zk0ZTAzsWbCR2SZ2J6ukkESf15VQakNs/view?usp=sharing",
+  // resume: "https://drive.google.com/file/d/1zk0ZTAzsWbCR2SZ2J6ukkESf15VQakNs/view?usp=sharing", // VIGNESHWARN RESUME.pdf
+  resume: "https://drive.google.com/file/d/1JmECqrjNUREtv9yCmmtvET9WpVFXlI1i/view?usp=sharing", // Vigneshwaran A Resume.pdf
   linkedin: "https://www.linkedin.com/in/vigneshwaran-a-10b7521a7/",
 };
 
