@@ -7,7 +7,6 @@ export const Bio = {
     "WordPress Developer",
     "SEO Analyst",
     "Programmer",
-    "Java Developer",
   ],
   description:
     "Experienced Full Stack Developer with 7 years of expertise in designing, developing, and managing complex web application. Proficient in building dynamic, responsive, and high-quality websites with a strong focus on performance, scalability, security, and user experience, ensuring cross-browser compatibility and mobile-first design.",
