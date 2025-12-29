@@ -9,10 +9,10 @@ export const Bio = {
     "Programmer",
   ],
   description:
-    "Experienced Full Stack Developer with 6 years of expertise in designing, developing, and managing complex web application. Proficient in leading cross-functional teams, driving Agile development, and delivering high-quality software solutions.",
+    "Experienced Full Stack Developer with 7 years of expertise in designing, developing, and managing complex web application. Proficient in building dynamic, responsive, and high-quality websites with a strong focus on performance, scalability, security, and user experience, ensuring cross-browser compatibility and mobile-first design.",
   github: "https://github.com/vigneshhaa",
-  // resume: "https://drive.google.com/file/d/1zk0ZTAzsWbCR2SZ2J6ukkESf15VQakNs/view?usp=sharing", // VIGNESHWARN RESUME.pdf
-  resume: "https://drive.google.com/file/d/1JmECqrjNUREtv9yCmmtvET9WpVFXlI1i/view?usp=sharing", // Vigneshwaran A Resume.pdf
+  // resume: "https://drive.google.com/file/d/1JmECqrjNUREtv9yCmmtvET9WpVFXlI1i/view?usp=sharing", // Vigneshwaran A Resume.pdf
+  resume: "https://drive.google.com/file/d/16o_mAH6Xz2mhPXrnFvMsRSeNsw6Mp0l8/view?usp=sharing", // Advance Vigneshwaran A Resume.pdf
   linkedin: "https://www.linkedin.com/in/vigneshwaran-a-10b7521a7/",
 };
 
@@ -264,7 +264,7 @@ export const education = [
     school: "Alpha College of Engineering and Technology, Puducherry University",
     date: "Aug 2014 - May 2018",
     grade: "70% CGPA",
-    desc: "I completed B.Tech at Alpha College of Engineering and Technology with an aggregate percentage of 70%.",
+    desc: "I have completed B.Tech at Alpha College of Engineering and Technology with an aggregate percentage of 70%.",
     degree: "Bachelor of Technology - B.Tech, Information Technology",
   },
   {
@@ -273,7 +273,7 @@ export const education = [
     school: "Balaji Higher Secondary School, Puducherry",
     date: "Mar 2013 - Apr 2014",
     grade: "70.08%",
-    desc: "I did my schooling in Balaji Higer Secondary School which is at Emblem with an aggregate percentage of 60%",
+    desc: "Completed my 12th standard schooling in Balaji Higer Secondary School, Emblem, with an aggregate of 70%.",
     degree: "ISC(XII), Computer Science",
   },
   {
@@ -282,7 +282,7 @@ export const education = [
     school: "Sri Ramakrishna Paramahamsar English High School, Puducherry",
     date: "Mar 2011 - Apr 2012",
     grade: "62.6%",
-    desc: "I completed my class 10 education at Sri Ramakrishna Paramahamsar English High School, Puducherry, where I studied Science with Computer Application.",
+    desc: "I completed my 10th standard education at Sri Ramakrishna Paramahamsar English High School, Puducherry, where I studied Science with Computer Application.",
     degree: "ICSC(X), Science with Computer",
   },
 ];
