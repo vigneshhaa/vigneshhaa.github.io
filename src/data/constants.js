@@ -37,12 +37,12 @@ export const skills = [
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
       },
       {
         name: "jQuery",
@@ -71,7 +71,7 @@ export const skills = [
     skills: [
       {
         name: "PHP",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/2560px-Webysther_20160423_-_Elephpant.svg.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
       },
       {
         name: "MySQL",
@@ -139,7 +139,7 @@ export const skills = [
       {
         name: "Photoshop",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Adobe_Photoshop_Express_logo.svg/2101px-Adobe_Photoshop_Express_logo.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-original.svg",
       },
       {
         name: "MongoDB Compass",
@@ -250,7 +250,7 @@ export const education = [
   {
     id: 0,
     img: "https://e7.pngegg.com/pngimages/643/465/png-clipart-graduation-ceremony-education-school-square-academic-cap-student-education-logo-purple-angle-thumbnail.png",
-    school: "Alpha College of Engineering and Technology, Puducherry University",
+    school: "Alpha College of Engineering and Technology, Pondicherry University",
     date: "Aug 2014 - May 2018",
     grade: "70% CGPA",
     desc: "I have completed B.Tech at Alpha College of Engineering and Technology with an aggregate percentage of 70%.",
@@ -259,20 +259,20 @@ export const education = [
   {
     id: 1,
     img: "https://e7.pngegg.com/pngimages/643/465/png-clipart-graduation-ceremony-education-school-square-academic-cap-student-education-logo-purple-angle-thumbnail.png",
-    school: "Balaji Higher Secondary School, Puducherry",
+    school: "Balaji Higher Secondary School, Pondicherry",
     date: "Mar 2013 - Apr 2014",
     grade: "70.08%",
     desc: "Completed my 12th standard schooling in Balaji Higer Secondary School, Emblem, with an aggregate of 70%.",
-    degree: "ISC(XII), Computer Science",
+    degree: "HSC(XII), Computer Science",
   },
   {
     id: 2,
     img: "https://e7.pngegg.com/pngimages/643/465/png-clipart-graduation-ceremony-education-school-square-academic-cap-student-education-logo-purple-angle-thumbnail.png",
-    school: "Sri Ramakrishna Paramahamsar English High School, Puducherry",
+    school: "Sri Ramakrishna Paramahamsar English High School, Pondicherry",
     date: "Mar 2011 - Apr 2012",
     grade: "62.6%",
-    desc: "I completed my 10th standard education at Sri Ramakrishna Paramahamsar English High School, Puducherry, where I studied Science with Computer Application.",
-    degree: "ICSC(X), Science with Computer",
+    desc: "I completed my 10th standard education at Sri Ramakrishna Paramahamsar English High School, Pondicherry, where I studied Science with Computer Application.",
+    degree: "HSC(X), Science with Computer",
   },
 ];
 

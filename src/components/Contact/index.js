@@ -150,7 +150,7 @@ const Contact = () => {
           <Desc><b>Email :</b> vigneshhaa@gmail.com</Desc>
           <Desc><b>Mobile Number :</b> 7397583382</Desc>
           <Desc><b>Website :</b> vigneshhaa.github.io</Desc>
-          <Desc><b>Location :</b> Puducherry, India.</Desc>
+          <Desc><b>Location :</b> Pondicherry, India.</Desc>
           
           {/* <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />

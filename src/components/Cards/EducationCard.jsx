@@ -1,148 +1,223 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Document = styled.img`
-    display: none;
-    height: 70px;
-    width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-`
-
-const Description = styled.div`
-    width: 100%;
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    margin-bottom: 10px;
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
-
-const Span = styled.span`
-overflow: hidden;
-display: -webkit-box;
-max-width: 100%;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
-`
-
 const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-    padding: 12px 16px;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        transform: translateY(-5px);
-    }
-    @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
+    gap: 14px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(133, 76, 230, 0.15);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    /* Subtle gradient overlay */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(133, 76, 230, 0.5), 
+            rgba(133, 76, 230, 0.2),
+            transparent
+        );
     }
 
-    &:hover ${Document}{
-        display: flex;
+    &:hover {
+        transform: translateY(-6px);
+        border-color: rgba(133, 76, 230, 0.4);
+        box-shadow: 
+            0 16px 48px rgba(133, 76, 230, 0.15),
+            0 8px 24px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
-    &:hover ${Span}{
-        overflow: visible;
-        -webkit-line-clamp: unset;
-
+    @media only screen and (max-width: 768px) {
+        padding: 16px;
+        gap: 10px;
     }
-    border: 0.1px solid #854CE6;
 `
 
 const Top = styled.div`
     width: 100%;
     display: flex;
-    gap: 12px
+    gap: 16px;
+    align-items: flex-start;
+`
+
+const ImageWrapper = styled.div`
+    position: relative;
+    flex-shrink: 0;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #854CE6, #5a32c8, #854CE6);
+        z-index: -1;
+        opacity: 0.6;
+    }
 `
 
 const Image = styled.img`
-    height: 50px;
-    background-color: #000;
-    border-radius: 10px;
-    margin-top: 4px;
-    @media only screen and (max-width: 768px){
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    background-color: #171721;
+    border-radius: 50%;
+    border: 2px solid rgba(133, 76, 230, 0.3);
+    @media only screen and (max-width: 768px) {
         height: 40px;
+        width: 40px;
     }
 `
 
 const Body = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    gap: 3px;
 `
-
 
 const Name = styled.div`
     font-size: 18px;
     font-weight: 600;
-    color: ${({ theme }) => theme.text_primary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 14px;
+    color: ${({ theme }) => theme.text_primary};
+    letter-spacing: 0.3px;
+    @media only screen and (max-width: 768px) {
+        font-size: 15px;
     }
 `
 
 const Degree = styled.div`
     font-size: 14px;
     font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
-    @media only screen and (max-width: 768px){
+    color: #854CE6;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
+    @media only screen and (max-width: 768px) {
         font-size: 12px;
     }
 `
 
-const Date = styled.div`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
-    @media only screen and (max-width: 768px){
-        font-size: 10px;
-    }
-`
-
-const Grade = styled.div`
-    font-size: 14px;
+const DateChip = styled.div`
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
     font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
+    color: ${({ theme }) => theme.text_secondary};
+    background: linear-gradient(135deg, rgba(133, 76, 230, 0.12), rgba(90, 50, 200, 0.08));
+    border: 1px solid rgba(133, 76, 230, 0.15);
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-top: 4px;
+    width: fit-content;
+    letter-spacing: 0.5px;
+    @media only screen and (max-width: 768px) {
+        font-size: 10px;
+        padding: 3px 10px;
     }
 `
 
+const Divider = styled.div`
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(133, 76, 230, 0.2), 
+        transparent
+    );
+    margin: 2px 0;
+`
 
+const GradeBadge = styled.div`
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text_primary + 'dd'};
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(133, 76, 230, 0.08);
+    border: 1px solid rgba(133, 76, 230, 0.2);
+    width: fit-content;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(133, 76, 230, 0.15);
+        border-color: rgba(133, 76, 230, 0.4);
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+`
+
+const GradeLabel = styled.span`
+    font-weight: 700;
+    background: linear-gradient(135deg, #854CE6, #a87bf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+`
+
+const Description = styled.div`
+    font-size: 14px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_primary + 'cc'};
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    @media only screen and (max-width: 768px) {
+        font-size: 12px;
+    }
+`
 
 const EducationCard = ({ education }) => {
     return (
         <Card>
             <Top>
-                <Image src={education.img} />
+                <ImageWrapper>
+                    <Image src={education.img} />
+                </ImageWrapper>
                 <Body>
                     <Name>{education.school}</Name>
                     <Degree>{education.degree}</Degree>
-                    <Date>{education.date}</Date>
+                    <DateChip>{education.date}</DateChip>
                 </Body>
             </Top>
-            <Grade><b>Grade: </b>{education.grade}</Grade>
-            <Description>
-                <Span>{education.desc}</Span>
-            </Description>
+
+            <Divider />
+
+            <GradeBadge>
+                <GradeLabel>Grade:</GradeLabel> {education.grade}
+            </GradeBadge>
+
+            {education?.desc && (
+                <>
+                    <Divider />
+                    <Description>{education.desc}</Description>
+                </>
+            )}
         </Card>
     )
 }
