@@ -55,7 +55,7 @@ const Navbar = () => {
             <MobileLink href='#contact' onClick={() => {
               setIsOpen(!isOpen)
             }}>Contact</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.linkedin} target="_blank">LinkedIn Profile</GitHubButton>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content', boxShadow: `0px 4px 15px ${theme.primary + '60'}`}} href={Bio.linkedin} target="_blank">LinkedIn Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

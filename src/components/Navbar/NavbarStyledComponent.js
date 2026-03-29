@@ -133,14 +133,16 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 'b3'}; /* Transparency for glass effect */
+    backdrop-filter: blur(12px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(12px);
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 24px 24px;
+    border-bottom: 1px solid ${({ theme }) => theme.primary + '40'}; /* Glowing border edge */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3), 0px 4px 40px ${({ theme }) => theme.primary + '20'}; /* Elegant shadow */
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-    z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
-
+    z-index: ${({ isOpen }) => (isOpen ? '1000' : '-100')}; /* Fixed z-index logic */
 `
 
 export const MobileMenuItems = styled.ul`
@@ -196,6 +198,7 @@ export  const MobileLink = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  font-size: 18px; /* Slightly larger text for mobile elegance */
   :hover {
     color: ${({ theme }) => theme.primary};
   }
