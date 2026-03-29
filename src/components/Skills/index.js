@@ -60,20 +60,26 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
+  border: 1px solid ${({ theme }) => theme.primary + '40'}; /* Elegant glowing border */
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4), 0px 0px 30px ${({ theme }) => theme.primary + '20'}; /* Soft theme glow */
+  border-radius: 20px;
+  padding: 24px 36px;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.5), 0px 0px 50px ${({ theme }) => theme.primary + '50'}; /* Intensified glow */
+    border: 1px solid ${({ theme }) => theme.primary + '80'};
+  }
+
   @media (max-width: 768px) {
     max-width: 400px;
-    padding: 10px 36px;
+    padding: 18px 36px;
   }
   @media (max-width: 500px) {
     max-width: 330px;
-    padding: 10px 36px;
+    padding: 18px 24px;
   }
-
-
 `
 
 const SkillTitle = styled.h2`
@@ -96,13 +102,23 @@ const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid ${({ theme }) => theme.primary + '30'}; /* Fine accent border */
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  background-color: ${({ theme }) => theme.primary + '08'}; /* Subtle wash on tags */
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 4px 20px ${({ theme }) => theme.primary + '40'};
+    transform: translateY(-3px);
+    border: 1px solid ${({ theme }) => theme.primary + '80'};
+    color: ${({ theme }) => theme.text_primary};
+  }
+
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;

@@ -95,11 +95,20 @@ export const HeroRightContainer = styled.div`
 export const Img = styled.img`
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 100%;
+  aspect-ratio: 1;
   max-width: 400px;
-  max-height: 600px;
-  border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  max-height: 400px;
+  border-radius: 30px; /* Modern rounded square */
+  border: 1px solid ${({ theme }) => theme.primary + '80'}; /* Subtle semi-transparent border */
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4), 0px 0px 40px ${({ theme }) => theme.primary + '40'}; /* Elegant glow effect */
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.5), 0px 0px 60px ${({ theme }) => theme.primary + '60'}; /* Enhanced glow on hover */
+  }
 
   @media (max-width: 768px) {
     max-width: 400px;

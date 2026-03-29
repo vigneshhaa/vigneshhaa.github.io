@@ -61,11 +61,49 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid ${({ theme }) => theme.primary + '40'}; /* Elegant glowing border */
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4), 0px 0px 40px ${({ theme }) => theme.primary + '20'}; /* Soft theme glow */
   margin-top: 28px;
-  gap: 12px;
+  gap: 20px;
+  transition: all 0.4s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.5), 0px 0px 60px ${({ theme }) => theme.primary + '50'};
+    border: 1px solid ${({ theme }) => theme.primary + '80'};
+  }
+`
+
+const ContactItem = styled.div`
+  font-size: 18px;
+  text-align: left;
+  color: ${({ theme }) => theme.text_secondary};
+  padding: 16px 20px;
+  background-color: ${({ theme }) => theme.primary + '08'}; /* Extremely subtle primary background */
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.primary + '15'};
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  
+  b {
+    color: ${({ theme }) => theme.text_primary};
+    margin-right: 12px;
+    font-weight: 600;
+  }
+  
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + '15'};
+    border: 1px solid ${({ theme }) => theme.primary + '40'};
+    transform: translateX(8px); /* Slide slightly on hover */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
 `
 
 const ContactTitle = styled.div`
@@ -147,10 +185,10 @@ const Contact = () => {
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <Desc><b>Email :</b> vigneshhaa@gmail.com</Desc>
-          <Desc><b>Mobile Number :</b> 7397583382</Desc>
-          <Desc><b>Website :</b> vigneshhaa.github.io</Desc>
-          <Desc><b>Location :</b> Pondicherry, India.</Desc>
+          <ContactItem><b>Email :</b> vigneshhaa@gmail.com</ContactItem>
+          <ContactItem><b>Mobile Number :</b> 7397583382</ContactItem>
+          <ContactItem><b>Website :</b> vigneshhaa.github.io</ContactItem>
+          <ContactItem><b>Location :</b> Pondicherry, India.</ContactItem>
           
           {/* <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
